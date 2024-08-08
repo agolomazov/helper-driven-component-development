@@ -1,0 +1,53 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  letter-spacing: 0.5px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.root [data-part='label'] {
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+.root [data-part='control'] {
+  display: flex;
+  gap: 10px;
+}
+
+.root [data-part='input'] {
+  padding: 0 10px;
+  outline: none;
+}
+
+.root [data-part='trigger'] {
+  cursor: pointer;
+}
+
+.root [data-part='message'] {
+  display: inline-block;
+  min-height: 16px;
+  font-size: 14px;
+}
+
+.primary {
+  background-color: #ddd;
+  color: #333;
+}
+
+.primary [data-part='input'] {
+  background: #eee;
+  border: 1px solid #ccc;
+  color: #33333386;
+}
+
+.secondary {
+  background-color: rgb(29, 29, 29);
+  color: #ebebeb;
+}
+
+.secondary [data-part='input'] {
+  color: #404040b6;
+}
