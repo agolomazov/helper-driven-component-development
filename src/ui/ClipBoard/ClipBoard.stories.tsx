@@ -34,7 +34,7 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
-  name: 'Clipboard (primary)',
+  name: 'Clipboard (primary light)',
   args: {
     value: 'Anton Golomazov',
     label: 'Скопировать ссылку',
@@ -44,11 +44,54 @@ export const Primary: Story = {
 };
 
 export const Secondary: Story = {
-  name: 'Clipboard (primary)',
+  name: 'Clipboard (secondary light)',
   args: {
     value: 'Anton Golomazov',
     label: 'Скопировать ссылку',
     message: 'Данные скопированы',
     variant: 'secondary',
   },
+};
+
+export const DarkPrimary: Story = {
+  name: 'Clipboard (primary dark)',
+  args: {
+    value: 'Anton Golomazov',
+    label: 'Скопировать ссылку',
+    message: 'Данные скопированы',
+    variant: 'primary',
+  },
+  parameters: {
+    backgrounds: {
+      theme: 'dark',
+    },
+  },
+};
+
+export const DarkSecondary: Story = {
+  name: 'Clipboard (secondary dark)',
+  args: {
+    value: 'Anton Golomazov',
+    label: 'Скопировать ссылку',
+    message: 'Данные скопированы',
+    variant: 'secondary',
+  },
+  parameters: {
+    backgrounds: {
+      theme: 'dark',
+    },
+  },
+  decorators: [
+    (Story) => (
+      <div
+        style={{
+          padding: '10rem',
+          background: '#ededed',
+          borderRadius: '10px',
+        }}
+      >
+        <Story />
+      </div>
+    ),
+  ],
 };
