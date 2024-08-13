@@ -1,5 +1,11 @@
+import Pin from './ui/Pin/Pin';
+
 function App() {
-  return <></>;
+  return (
+    <>
+      <Pin placeholder='*' name='pin' />
+    </>
+  );
 }
 
 export default App;
