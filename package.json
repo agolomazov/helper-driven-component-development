@@ -16,6 +16,7 @@
     "@zag-js/pin-input": "^0.65.0",
     "@zag-js/react": "^0.65.0",
     "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.1",
     "cva": "^1.0.0-beta.1",
     "lucide-react": "^0.424.0",
     "react": "^18.3.1",
