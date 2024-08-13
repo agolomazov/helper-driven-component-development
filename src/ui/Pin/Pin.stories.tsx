@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
+import { fn } from '@storybook/test';
 import Pin from './Pin';
 
 const meta = {
@@ -37,7 +38,10 @@ const meta = {
       description: 'Функция для запуска на изменение значения поля',
     },
   },
-  args: {},
+  args: {
+    onValueComplete: fn((details) => console.log(details)),
+    onValueChange: fn((details) => console.log(details)),
+  },
   tags: ['autodocs'],
 } satisfies Meta<typeof Pin>;
 
@@ -53,9 +57,6 @@ export const Primary: Story = {
     mask: true,
     type: 'numeric',
     autoFocus: true,
-    onValueComplete(details) {
-      console.log(details);
-    },
   },
 };
 
@@ -68,8 +69,5 @@ export const PrimaryUnmask: Story = {
     mask: false,
     type: 'numeric',
     autoFocus: true,
-    onValueComplete(details) {
-      console.log(details);
-    },
   },
 };
