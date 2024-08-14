@@ -11,3 +11,19 @@ Workshop для frontend-команды МКБ Банка
 ## Как развернуть материалы?
 
 1. Склонировать репозиторий командой
+
+```sh
+git clone git@github.com:agolomazov/helper-driven-component-development.git
+```
+
+2. Установить зависимости командой
+
+```sh
+npm install
+```
+
+3. Запустить команду
+
+```sh
+npm run sb
+```
